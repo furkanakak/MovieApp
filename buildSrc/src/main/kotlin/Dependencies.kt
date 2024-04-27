@@ -14,4 +14,10 @@ object Dependencies{
     val hiltCompiler = "com.google.dagger:hilt-compiler:${DependenciesVersions.hilt}"
     val hiltAndroidTesting = "com.google.dagger:hilt-android-testing:${DependenciesVersions.hilt}"
 
+    // Retrofit dependencies
+    val retrofit = "com.squareup.retrofit2:retrofit:${DependenciesVersions.retrofit}"
+    val retrofitGsonConverter = "com.squareup.retrofit2:converter-gson:${DependenciesVersions.retrofit}"
+
+
+
 }
