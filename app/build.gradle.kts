@@ -1,48 +1,47 @@
 plugins {
-    alias(libs.plugins.androidApplication)
-    alias(libs.plugins.jetbrainsKotlinAndroid)
+    id(Plugins.androidApplication) version PluginVersion.androidGradlePlugin
+    id(Plugins.kotlinAndroid) version PluginVersion.kotlinGradlePlugin
 }
 
 android {
-    namespace = "com.furkan.movieapp"
-    compileSdk = 34
+    namespace = Configs.namespace
+    compileSdk = Configs.compileSdk
 
     defaultConfig {
-        applicationId = "com.furkan.movieapp"
-        minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        applicationId = Configs.applicationId
+        minSdk = Configs.minSdk
+        targetSdk = Configs.targetSdk
+        versionCode = Configs.versionCode
+        versionName = Configs.versionName
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = Configs.testInstrumentationRunner
     }
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = Configs.isMinifyEnabled
             proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                getDefaultProguardFile(Configs.proguardFileName),
+                Configs.proguardRules
             )
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = Configs.sourceCompatibility
+        targetCompatibility = Configs.targetCompatibility
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = Configs.jvmTarget
     }
 }
 
 dependencies {
-
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    implementation (Dependencies.coreKtx)
+    implementation (Dependencies.appCompat)
+    implementation (Dependencies.material)
+    implementation (Dependencies.activityKtx)
+    implementation (Dependencies.constraintLayout)
+    testImplementation (Dependencies.junit)
+    androidTestImplementation (Dependencies.androidJunit)
+    androidTestImplementation (Dependencies.espressoCore)
 }
