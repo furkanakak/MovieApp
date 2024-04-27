@@ -2,6 +2,7 @@ import org.gradle.api.JavaVersion
 
 object Configs{
    val namespace = "com.furkan.movieapp"
+   val namespaceCore = "com.furkan.core"
    val compileSdk = 34
    val applicationId = "com.furkan.movieapp"
    val minSdk = 24
@@ -15,4 +16,5 @@ object Configs{
    val isMinifyEnabled = false
    val proguardFileName = "proguard-android-optimize.txt"
    val proguardRules =  "proguard-rules.pro"
+   val consumerProguardFiles =  "consumer-rules.pro"
 }
