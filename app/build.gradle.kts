@@ -1,6 +1,8 @@
 plugins {
     id(Plugins.androidApplication) version PluginVersion.androidGradlePlugin
     id(Plugins.kotlinAndroid) version PluginVersion.kotlinGradlePlugin
+    id(Plugins.kotlinKapt)
+    id(Plugins.hiltAndroidPlugin)
 }
 
 android {
@@ -37,12 +39,23 @@ android {
 
 dependencies {
     implementation(project(":core"))
-    implementation (Dependencies.coreKtx)
-    implementation (Dependencies.appCompat)
-    implementation (Dependencies.material)
-    implementation (Dependencies.activityKtx)
-    implementation (Dependencies.constraintLayout)
-    implementation (Dependencies.junit)
-    implementation (Dependencies.androidJunit)
-    implementation (Dependencies.espressoCore)
+    implementation(Dependencies.coreKtx)
+    implementation(Dependencies.appCompat)
+    implementation(Dependencies.material)
+    implementation(Dependencies.activityKtx)
+    implementation(Dependencies.constraintLayout)
+    implementation(Dependencies.junit)
+    implementation(Dependencies.androidJunit)
+    implementation(Dependencies.espressoCore)
+
+
+    // Hilt dependencies
+    implementation(Dependencies.hiltAndroid)
+    kapt(Dependencies.hiltCompiler)
+    androidTestImplementation(Dependencies.hiltAndroidTesting)
+    kaptAndroidTest(Dependencies.hiltCompiler)
+    testImplementation(Dependencies.hiltAndroidTesting)
+    kaptTest(Dependencies.hiltCompiler)
+
+
 }

@@ -1,6 +1,8 @@
 plugins {
     id(Plugins.kotlinAndroid) version PluginVersion.kotlinGradlePlugin
     id(Plugins.libraryAndroid)
+    id(Plugins.kotlinKapt)
+    id(Plugins.hiltAndroidPlugin)
 }
 
 android {
@@ -40,4 +42,13 @@ dependencies {
     testImplementation (Dependencies.junit)
     androidTestImplementation (Dependencies.androidJunit)
     androidTestImplementation (Dependencies.espressoCore)
+
+    // Hilt dependencies
+    implementation(Dependencies.hiltAndroid)
+    kapt(Dependencies.hiltCompiler)
+    androidTestImplementation(Dependencies.hiltAndroidTesting)
+    kaptAndroidTest(Dependencies.hiltCompiler)
+    testImplementation(Dependencies.hiltAndroidTesting)
+    kaptTest(Dependencies.hiltCompiler)
+
 }

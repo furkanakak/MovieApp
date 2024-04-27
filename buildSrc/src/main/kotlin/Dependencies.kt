@@ -7,4 +7,11 @@ object Dependencies{
     val junit = "junit:junit:${DependenciesVersions.junit}"
     val androidJunit = "androidx.test.ext:junit:${DependenciesVersions.androidJunit}"
     val espressoCore = "androidx.test.espresso:espresso-core:${DependenciesVersions.espressoCore}"
+
+
+    // Hilt dependencies
+    val hiltAndroid = "com.google.dagger:hilt-android:${DependenciesVersions.hilt}"
+    val hiltCompiler = "com.google.dagger:hilt-compiler:${DependenciesVersions.hilt}"
+    val hiltAndroidTesting = "com.google.dagger:hilt-android-testing:${DependenciesVersions.hilt}"
+
 }

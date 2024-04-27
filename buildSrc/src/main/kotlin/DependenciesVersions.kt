@@ -7,4 +7,5 @@ object DependenciesVersions{
     const val junit = "4.13.2"
     const val androidJunit = "1.1.5"
     const val espressoCore = "3.5.1"
+    const val hilt = "2.46.1"
 }
