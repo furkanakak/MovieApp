@@ -19,5 +19,10 @@ object Dependencies{
     val retrofitGsonConverter = "com.squareup.retrofit2:converter-gson:${DependenciesVersions.retrofit}"
 
 
+    // OkHttp dependencies
+    val okhttp = "com.squareup.okhttp3:okhttp:${DependenciesVersions.okhttp}"
+    val okhttpLoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${DependenciesVersions.okhttp}"
+
+
 
 }

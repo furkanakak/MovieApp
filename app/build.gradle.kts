@@ -58,14 +58,5 @@ dependencies {
     kaptTest(Dependencies.hiltCompiler)
 
 
-    // Retrofit dependencies
-    implementation (Dependencies.retrofit)
-    implementation (Dependencies.retrofitGsonConverter)
-
-
-
-
-
-
 
 }

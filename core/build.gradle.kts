@@ -51,10 +51,13 @@ dependencies {
     testImplementation(Dependencies.hiltAndroidTesting)
     kaptTest(Dependencies.hiltCompiler)
 
+    // Retrofit dependencies
+    implementation (Dependencies.retrofit)
+    implementation (Dependencies.retrofitGsonConverter)
 
-    // Retrofit
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    // OkHttp dependencies
+    implementation (Dependencies.okhttp)
+    implementation (Dependencies.okhttpLoggingInterceptor)
 
 
 
