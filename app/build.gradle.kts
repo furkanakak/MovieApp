@@ -36,12 +36,13 @@ android {
 }
 
 dependencies {
+    implementation(project(":core"))
     implementation (Dependencies.coreKtx)
     implementation (Dependencies.appCompat)
     implementation (Dependencies.material)
     implementation (Dependencies.activityKtx)
     implementation (Dependencies.constraintLayout)
-    testImplementation (Dependencies.junit)
-    androidTestImplementation (Dependencies.androidJunit)
-    androidTestImplementation (Dependencies.espressoCore)
+    implementation (Dependencies.junit)
+    implementation (Dependencies.androidJunit)
+    implementation (Dependencies.espressoCore)
 }
