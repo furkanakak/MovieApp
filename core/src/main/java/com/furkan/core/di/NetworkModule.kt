@@ -2,11 +2,12 @@ package com.furkan.core.di
 
 import com.furkan.core.common.Constants
 import com.furkan.core.common.ServiceLocator
-import com.furkan.core.data.remote.apiservice.ApiService
+import com.furkan.core.data.remote.ApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ActivityRetainedComponent
+import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -14,7 +15,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 
 @Module
-@InstallIn(ActivityRetainedComponent::class)
+@InstallIn(SingletonComponent::class)
 class NetworkModule {
     @Provides
     fun provideLoggingInterceptor(): HttpLoggingInterceptor {
