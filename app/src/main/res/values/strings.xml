@@ -4,5 +4,6 @@
     <string name="star">Star</string>
     <string name="movie_image">movie Image</string>
     <string name="movie_detail_icon">movie Detail Icon</string>
+    <string name="main_title">MovieLIST</string>
 
 </resources>
