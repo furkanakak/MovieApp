@@ -41,8 +41,6 @@ android {
         buildConfig = true
     }
 
-
-
 }
 
 dependencies {
@@ -65,6 +63,8 @@ dependencies {
     testImplementation(Dependencies.hiltAndroidTesting)
     kaptTest(Dependencies.hiltCompiler)
 
+    // Navigation Component
+    implementation (Dependencies.navigationFragmentKtx)
 
 
 }

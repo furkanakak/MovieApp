@@ -23,6 +23,9 @@ object Dependencies{
     val okhttp = "com.squareup.okhttp3:okhttp:${DependenciesVersions.okhttp}"
     val okhttpLoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${DependenciesVersions.okhttp}"
 
+    // Navigation Component
+    val navigationFragmentKtx = "androidx.navigation:navigation-fragment-ktx:${DependenciesVersions.navigation}"
+
 
 
 }

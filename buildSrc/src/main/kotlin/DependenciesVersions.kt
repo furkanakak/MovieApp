@@ -10,4 +10,5 @@ object DependenciesVersions{
     const val hilt = "2.46.1"
     const val retrofit = "2.9.0"
     const val okhttp = "4.9.0"
+    const val navigation = "2.6.0"
 }
