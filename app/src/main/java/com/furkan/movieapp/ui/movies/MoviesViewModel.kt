@@ -1,5 +1,6 @@
 package com.furkan.movieapp.ui.movies
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.furkan.core.common.networking.Resource
@@ -19,6 +20,7 @@ class MoviesViewModel @Inject constructor(
 
     private val _movies = MutableStateFlow<Resource<MovieResponse>>(Resource.loading(null))
     val movies: StateFlow<Resource<MovieResponse>> = _movies.asStateFlow()
+
 
     fun getMovies(page: Int) {
         viewModelScope.launch {
