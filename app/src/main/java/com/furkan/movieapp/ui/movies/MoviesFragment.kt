@@ -7,6 +7,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import com.furkan.core.base.BaseFragment
 import com.furkan.core.common.extension.showToast
 import com.furkan.core.common.networking.Resource
@@ -64,6 +65,8 @@ class MoviesFragment : BaseFragment<MoviesFragmentBinding>(MoviesFragmentBinding
 
     private fun adapterItemClicked(movie: Movie) {
         Log.v("Movie", movie.title ?: "-")
+        val action = MoviesFragmentDirections.actionMoviesFragmentToMovieDetailFragment(movie.title ?: "Movie")
+        findNavController().navigate(action)
     }
 
     private fun getMovies() {
