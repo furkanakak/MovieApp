@@ -8,6 +8,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.furkan.core.base.BaseFragment
+import com.furkan.core.common.extension.showToast
 import com.furkan.core.common.networking.Resource
 import com.furkan.core.data.entity.Movie
 import com.furkan.movieapp.databinding.MoviesFragmentBinding
@@ -24,6 +25,13 @@ class MoviesFragment : BaseFragment<MoviesFragmentBinding>(MoviesFragmentBinding
         setupRecyclerView()
         getMovies()
         observeMovies()
+        listener()
+    }
+
+    private fun listener() {
+        binding.customAddButton.setOnClickListener {
+            requireContext() showToast "Add Button Clicked"
+        }
     }
 
     private fun observeMovies() {
