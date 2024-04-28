@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools">
 
+
+    <com.furkan.core.common.costom.component.CustomTopBar
+        android:id="@+id/customTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/main_title"
+        tools:ignore="MissingConstraints" />
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv"
         android:layout_width="match_parent"
@@ -14,7 +26,7 @@
         app:layout_constraintBottom_toTopOf="@+id/customAddButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customTopBar"
         tools:listitem="@layout/item_movie" />
 
 
