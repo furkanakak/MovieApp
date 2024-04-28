@@ -11,4 +11,6 @@ object DependenciesVersions{
     const val retrofit = "2.9.0"
     const val okhttp = "4.9.0"
     const val navigation = "2.6.0"
+    const val glide = "4.13.2"
+    const val glideCompiler = "4.12.0"
 }

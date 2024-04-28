@@ -66,5 +66,9 @@ dependencies {
     // Navigation Component
     implementation (Dependencies.navigationFragmentKtx)
 
+    // Glide dependencies
+    implementation (Dependencies.glide)
+    annotationProcessor (Dependencies.glideCompiler)
+
 
 }

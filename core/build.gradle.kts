@@ -62,6 +62,10 @@ dependencies {
     implementation (Dependencies.okhttp)
     implementation (Dependencies.okhttpLoggingInterceptor)
 
+    // Glide dependencies
+    implementation (Dependencies.glide)
+    annotationProcessor (Dependencies.glideCompiler)
+
 
 
 }
