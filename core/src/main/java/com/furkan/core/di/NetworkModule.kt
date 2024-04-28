@@ -19,6 +19,14 @@ class NetworkModule {
     @Provides
     fun provideLoggingInterceptor(): HttpLoggingInterceptor {
         val logger = HttpLoggingInterceptor()
+        val appConfig = ServiceLocator.getAppConfig()
+        val isDebug = appConfig.isDebug
+
+      if (isDebug) {
+            logger.level = HttpLoggingInterceptor.Level.BODY
+        } else {
+            logger.level = HttpLoggingInterceptor.Level.NONE
+        }
         return logger
     }
 
