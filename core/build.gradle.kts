@@ -3,6 +3,7 @@ plugins {
     id(Plugins.libraryAndroid)
     id(Plugins.kotlinKapt)
     id(Plugins.hiltAndroidPlugin)
+    id(Plugins.navigationSafeargs)
 }
 
 android {
@@ -65,6 +66,13 @@ dependencies {
     // Glide dependencies
     implementation (Dependencies.glide)
     annotationProcessor (Dependencies.glideCompiler)
+
+
+    // Navigation dependencies
+    implementation (Dependencies.navigationFragmentKtx)
+    implementation (Dependencies.navigationUiKtx)
+
+
 
 
 

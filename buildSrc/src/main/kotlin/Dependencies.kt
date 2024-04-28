@@ -25,6 +25,7 @@ object Dependencies{
 
     // Navigation Component
     val navigationFragmentKtx = "androidx.navigation:navigation-fragment-ktx:${DependenciesVersions.navigation}"
+    val navigationUiKtx = "androidx.navigation:navigation-ui-ktx:${DependenciesVersions.navigation}"
 
     // Glide dependencies
     val glide = "com.github.bumptech.glide:glide:${DependenciesVersions.glide}"
