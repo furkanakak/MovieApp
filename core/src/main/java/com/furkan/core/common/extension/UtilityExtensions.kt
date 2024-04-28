@@ -1,5 +1,7 @@
 package com.furkan.core.common.extension
 
+import android.content.Context
+import android.widget.Toast
 import com.furkan.core.common.Constants
 import java.util.Locale
 
@@ -21,3 +23,11 @@ fun Double?.formatSingleDecimal(): String {
     return String.format(Locale.ENGLISH, "%.1f", this)
 }
 
+
+/**
+ * Extension function to show a toast message.
+ * @param message The message to be shown.
+ */
+infix fun Context.showToast(message: String) {
+    Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+}
