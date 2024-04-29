@@ -1,8 +1,10 @@
 package com.furkan.core.common.extension
 
 import android.content.Context
+import android.util.Log
 import android.widget.Toast
 import com.furkan.core.common.Constants
+import com.furkan.core.common.ServiceLocator
 import java.util.Locale
 
 
@@ -31,3 +33,20 @@ fun Double?.formatSingleDecimal(): String {
 infix fun Context.showToast(message: String) {
     Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 }
+
+
+/**
+ * Logs a debug message with the given tag if the application is in debug mode.
+ * Usage: "Tag" log "Debug message to log"
+ * @param message The message to be logged.
+ */
+infix fun String.log(message: String) {
+    if (ServiceLocator.getAppConfig().isDebug) {
+        Log.d(this, message)
+    }
+}
+
+
+
+
+
