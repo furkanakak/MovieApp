@@ -1,8 +1,11 @@
 package com.furkan.core.di
 
+import com.furkan.core.data.local.LocalDataSourceImpl
+import com.furkan.core.data.local.MovieDao
 import com.furkan.core.data.remote.ApiService
-import com.furkan.core.data.remote.RemoteDataSourceImpl
+import com.furkan.core.data.remote.RemoteRemoteDataSourceImpl
 import com.furkan.core.data.remote.RepositoryImpl
+import com.furkan.core.domain.LocalDataSource
 import com.furkan.core.domain.RemoteDataSource
 import com.furkan.core.domain.Repository
 import dagger.Module
@@ -15,13 +18,18 @@ import dagger.hilt.components.SingletonComponent
 @InstallIn(SingletonComponent::class)
 class RepositoryModule {
     @Provides
-    fun provideRepository(repository : RepositoryImpl): Repository {
-        return repository
+    fun provideRepository(remoteDataSource: RemoteDataSource,localDataSource: LocalDataSource): Repository {
+        return RepositoryImpl(remoteDataSource,localDataSource)
+    }
+
+    @Provides
+    fun provideLocalDataSource(movieDao: MovieDao): LocalDataSource {
+        return LocalDataSourceImpl(movieDao)
     }
 
     @Provides
     fun provideRemoteDataSource(apiService: ApiService): RemoteDataSource {
-        return RemoteDataSourceImpl(apiService)
+        return RemoteRemoteDataSourceImpl(apiService)
     }
 
 }
