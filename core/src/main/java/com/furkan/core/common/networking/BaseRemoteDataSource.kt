@@ -1,7 +1,7 @@
 package com.furkan.core.common.networking
 
 import retrofit2.Response
-abstract class BaseDataSource {
+abstract class BaseRemoteDataSource {
     /**
      * Executes a network call and returns the result wrapped in a Resource.
      * This method handles the response of the network call executed by the `call` lambda function.
