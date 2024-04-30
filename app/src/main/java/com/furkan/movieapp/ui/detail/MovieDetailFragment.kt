@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.View
 import com.furkan.core.base.BaseFragment
 import com.furkan.core.common.Constants
-import com.furkan.movieapp.R
 import com.furkan.movieapp.databinding.MovieDetailFragmentBinding
 
 class MovieDetailFragment: BaseFragment<MovieDetailFragmentBinding>(MovieDetailFragmentBinding::inflate) {

@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.furkan.core.common.extension.extractYearWithFormatter
 import com.furkan.core.common.extension.formatSingleDecimal
 import com.furkan.core.common.extension.loadImage
+import com.furkan.core.common.extension.log
 import com.furkan.core.common.extension.toMoviePath
 import com.furkan.core.data.entity.Movie
 import com.furkan.movieapp.R
@@ -19,6 +20,7 @@ class MovieAdapter : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
 
     @SuppressLint("NotifyDataSetChanged")
     fun setAdapterList(movies: List<Movie>) {
+        "setAdapterList" log "${movies.size}"
         this.movies.addAll(movies)
         notifyDataSetChanged()
     }
