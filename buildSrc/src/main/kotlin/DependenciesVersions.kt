@@ -13,4 +13,7 @@ object DependenciesVersions{
     const val navigation = "2.6.0"
     const val glide = "4.13.2"
     const val glideCompiler = "4.12.0"
+    const val room = "2.6.1"
+    const val coroutinesAndroid = "1.6.4"
+    const val coroutinesCore = "1.6.0"
 }

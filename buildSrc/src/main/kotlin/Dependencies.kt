@@ -32,4 +32,14 @@ object Dependencies{
     val glideCompiler = "com.github.bumptech.glide:compiler:${DependenciesVersions.glideCompiler}"
 
 
+    // Room dependencies
+    val roomKtx = "androidx.room:room-ktx:${DependenciesVersions.room}"
+    val roomCompiler = "androidx.room:room-compiler:${DependenciesVersions.room}"
+    val roomTesting = "androidx.room:room-testing:${DependenciesVersions.room}"
+
+    // Coroutines dependencies
+    val coroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${DependenciesVersions.coroutinesAndroid}"
+    val coroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${DependenciesVersions.coroutinesCore}"
+
+
 }

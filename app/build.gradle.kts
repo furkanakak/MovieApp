@@ -72,5 +72,16 @@ dependencies {
     implementation (Dependencies.glide)
     annotationProcessor (Dependencies.glideCompiler)
 
+    // Room dependencies
+    implementation (Dependencies.roomKtx)
+    kapt (Dependencies.roomCompiler)
+    androidTestImplementation (Dependencies.roomTesting)
+
+    //Coroutines
+    implementation (Dependencies.coroutinesAndroid)
+    implementation (Dependencies.coroutinesCore)
+
+
+
 
 }

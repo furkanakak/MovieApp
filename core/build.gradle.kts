@@ -73,7 +73,15 @@ dependencies {
     implementation (Dependencies.navigationUiKtx)
 
 
+    // Room dependencies
+    implementation (Dependencies.roomKtx)
+    kapt (Dependencies.roomCompiler)
+    androidTestImplementation (Dependencies.roomTesting)
 
+
+    //Coroutines
+    implementation (Dependencies.coroutinesAndroid)
+    implementation (Dependencies.coroutinesCore)
 
 
 }
